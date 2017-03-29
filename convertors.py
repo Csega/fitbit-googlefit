@@ -49,7 +49,7 @@ class Convertor:
 		return int((logTime - dawnOfTime).total_seconds() * 1000)
 
 	def nano(self, val):
-		"""Converts epoch milliseconds to nanoseconds precision"""
+		"""Converts epoch milliseconds to nanosecond precision"""
 		return int(val * (10**6))
 
 	def daterange(self, start_date, end_date, step=1):
@@ -60,7 +60,7 @@ class Convertor:
 		for n in range(0, int((end_date - start_date).days), step):
 			yield start_date + timedelta(n)
 
-	def parseHumanReadableDate(self,datestr):
+	def parseHumanReadableDate(self, datestr):
 		"""Parses a human-readable date string to python's date object"""
 		cal = pdt.Calendar()
 		now = datetime.datetime.now()
